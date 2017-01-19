@@ -1,0 +1,18 @@
+{
+  "name": "express-js",
+  "version": "1.0.0",
+  "description": "express js + node practise",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app",
+    "pretest": "echo starting test!!",
+    "test": "node test",
+    "test-watch": "nodemon test"
+  },
+  "author": "George Madiarov",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

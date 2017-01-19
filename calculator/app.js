@@ -4,6 +4,7 @@ var command = process.argv[2];
 var a = Number(process.argv[3]);
 var b = Number(process.argv[4]);
 
-var value = math[command](a,b);
+// var value = math[command](a,b);
+var value = math.add(4, 6)
 
 console.log(value);
