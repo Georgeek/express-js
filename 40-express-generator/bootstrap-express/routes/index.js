@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET About page. */
+var store = require('../datas');
+
+/* GET home page. */
 router.get('/', function(req, res, next) {
-	console.log('about');
-  res.render('about', { title: 'About' });
+  res.render('index', store.home);
 });
 
 module.exports = router;
