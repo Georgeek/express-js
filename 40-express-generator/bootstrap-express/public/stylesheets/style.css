@@ -47,7 +47,9 @@ header .social-links {
 header .social-links a {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+}
+header .social-links a div {
+  padding-right: 10px;
 }
 header .social-links--github {
   height: 20px;
