@@ -3,7 +3,7 @@ body {
   background-color: #a0a0a0;
 }
 header {
-  width: 135px;
+  width: 10rem;
   padding: 30px 0;
   position: fixed;
   top: 0;
@@ -15,66 +15,67 @@ header {
   background-color: #fff;
   text-align: center;
 }
+header:hover span {
+  transform: translateX(0);
+  transition: 0.2s;
+}
+header span {
+  margin-top: 5px;
+  transform: translateX(-100px);
+  transition: 0.1s;
+  color: #000;
+}
 header a {
-  color: #00b7ff;
+  margin: 0 auto;
+  padding: 0.85rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   text-transform: uppercase;
+  color: #000;
 }
 header a:hover {
   text-decoration: none;
-  color: #f00;
+  color: #000;
+  opacity: 0.75;
+  transform: translateY(3px);
+  transition: 0.1s;
+}
+header a:hover .logo--js-j-svg {
+  fill: #4caf50;
+}
+header a:hover .logo--js-s-svg {
+  fill: #ffeb3b;
 }
 header a:hover .nav-link--home-svg {
-  fill: #f00;
+  fill: #e91e63;
 }
-header .logo {
+header a:hover .nav-link--about-svg {
+  fill: #f44336;
+}
+header a:hover .nav-link--gallery-svg {
+  fill: #9c27b0;
+}
+header a:hover .social-links--gmail {
+  fill: #03a9f4;
+}
+header a svg {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+header .logo svg {
   height: 80px;
-  background-image: url("/images/nodejs-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  width: 80px;
 }
 header ul {
-  margin: 20px 0;
-  padding: 0 20px 0 0;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
 }
-header ul li {
-  margin-bottom: 10px;
-}
-header ul li a {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-header ul li:last-child {
-  margin-bottom: 0;
-}
-header ul li svg {
-  margin: 0 auto;
-  width: 40px;
-  height: 40px;
-}
-header ul li .nav-link--home-svg {
-  fill: #aaa;
-}
 header .social-links {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 0 20px 0 5px;
-}
-header .social-links a div {
-  padding-right: 10px;
-}
-header svg {
   margin: 0 auto;
-  width: 40px;
-  height: 40px;
-}
-header--gmail {
-  height: 20px;
-  width: 20px;
+  padding: 0;
 }

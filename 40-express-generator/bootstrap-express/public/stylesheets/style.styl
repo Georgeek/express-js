@@ -3,7 +3,7 @@ body
   background-color: #a0a0a0
 
 header
-  width: 135px
+  width: 10rem
   padding: 30px 0
   position: fixed
   top: 0
@@ -14,71 +14,57 @@ header
   justify-content: space-between
   background-color: white
   text-align: center
-
+  &:hover
+    span
+      transform: translateX(0)
+      transition: .2s
+  span
+    margin-top: 5px
+    transform: translateX(-100px)
+    transition: .1s
+    color: black
   a
-    color: #00B7FF
+    margin: 0 auto
+    padding: .85rem .6rem
+    display: flex
+    flex-direction: column
+    text-align: center
     text-transform: uppercase
+    color: black
     &:hover
       text-decoration: none
-      
-      color: red
-    &:hover .nav-link--home-svg
-      fill: red
-  
-  .logo
-    height: 80px
-    background-image: url(/images/nodejs-icon.svg) 
-    background-repeat: no-repeat
-    background-position: center
-    background-size: contain
-
-  ul
-    margin: 20px 0
-    padding: 0 20px 0 0
-    display: flex
-    flex-direction: column
-    list-style: none
-    li
-      margin-bottom: 10px
-      a
-        margin: 0 auto
-        display: flex
-        flex-direction: column
-        
-        text-align: center
-      &:last-child
-        margin-bottom: 0
-      svg
-        margin: 0 auto
-        width: 40px
-        height: 40px
+      color: black
+      opacity: .75
+      transform: translateY(3px)
+      transition: .1s
+      .logo--js-j-svg
+        fill: #4CAF50
+      .logo--js-s-svg
+        fill: #FFEB3B
       .nav-link--home-svg
-        fill: #aaa
-
-  .social-links
-    display: flex
-    flex-direction: column
-    margin: 20px 0
-    padding: 0 20px 0 5px
-    a
-      // display: flex
-      // flex-direction: row-reverse
-      // justify-content: space-between
-      div
-        padding-right: 10px
-    // &--github
-    //   height: 20px
-    //   width: 20px
-    //   background-image: url(/images/github.svg) 
-    //   background-repeat: no-repeat
-    //   background-position: center
-    //   background-size: contain
-      // &:before
-      //   fill: red
+        fill: #E91E63
+      .nav-link--about-svg
+        fill: #f44336
+      .nav-link--gallery-svg
+        fill: #9C27B0
+      .social-links--gmail
+        fill: #03A9F4
     svg
       margin: 0 auto
       width: 40px
       height: 40px
-    &--gmail
-      height: 20px
-      width: 20px
+  .logo
+    svg
+      height: 80px
+      width: 80px
+
+  ul
+    margin: 0 auto
+    padding: 0
+    display: flex
+    flex-direction: column
+    list-style: none
+
+  .social-links
+    margin: 0 auto
+    padding: 0
