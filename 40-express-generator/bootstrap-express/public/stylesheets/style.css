@@ -2,9 +2,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #a0a0a0;
 }
-a {
-  color: #00b7ff;
-}
 header {
   width: 135px;
   padding: 30px 0;
@@ -16,6 +13,18 @@ header {
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
+  text-align: center;
+}
+header a {
+  color: #00b7ff;
+  text-transform: uppercase;
+}
+header a:hover {
+  text-decoration: none;
+  color: #f00;
+}
+header a:hover .nav-link--home-svg {
+  fill: #f00;
 }
 header .logo {
   height: 80px;
@@ -30,13 +39,26 @@ header ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  text-align: right;
 }
 header ul li {
   margin-bottom: 10px;
 }
+header ul li a {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 header ul li:last-child {
   margin-bottom: 0;
+}
+header ul li svg {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+header ul li .nav-link--home-svg {
+  fill: #aaa;
 }
 header .social-links {
   display: flex;
@@ -44,43 +66,15 @@ header .social-links {
   margin: 20px 0;
   padding: 0 20px 0 5px;
 }
-header .social-links a {
-  display: flex;
-  flex-direction: row-reverse;
-}
 header .social-links a div {
   padding-right: 10px;
 }
-header .social-links--github {
-  height: 20px;
-  width: 20px;
-  background-image: url("/images/github.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+header svg {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
 }
-header .social-links--gmail {
-  background-image: url("/images/google.svg");
+header--gmail {
   height: 20px;
   width: 20px;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  text-align: right;
-}
-header .social-links--vk {
-  background-image: url("/images/vk.svg");
-  height: 20px;
-  width: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-header .social-links--instagram {
-  background-image: url("/images/instagram.svg");
-  height: 20px;
-  width: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
