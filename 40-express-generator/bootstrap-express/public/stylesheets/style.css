@@ -1,20 +1,8 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #a0a0a0;
-}
-.site-wrap {
-  display: flex;
-  min-height: 100vh;
-}
-main {
-  flex: 1;
-  height: 2000px;
-}
 header {
   width: 10rem;
-  padding: 30px 0;
 }
 header .header-position {
+  padding: 2em 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,11 +13,11 @@ header .header-position {
   background-color: #fff;
   text-align: center;
 }
-header:hover span {
+header:hover .nav-text {
   transform: translateX(0);
   transition: 0.2s;
 }
-header span {
+header .nav-text {
   margin-top: 5px;
   transform: translateX(-100px);
   transition: 0.1s;
@@ -88,4 +76,108 @@ header ul {
 header .social-links {
   margin: 0 auto;
   padding: 0;
+}
+.mobile-nav-toggle {
+  margin-right: 20px;
+  width: 45px;
+  height: 50px;
+  display: none;
+  cursor: pointer;
+}
+.mobile-nav-toggle span,
+.mobile-nav-toggle span:before,
+.mobile-nav-toggle span:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.mobile-nav-toggle span:before {
+  top: 15px;
+}
+.mobile-nav-toggle span:after {
+  bottom: 18px;
+}
+.mobile-nav-toggle:hover span {
+  background: transparent;
+}
+.mobile-nav-toggle:hover span:before,
+.mobile-nav-toggle:hover span:after {
+  transform-origin: center;
+  width: 50px;
+}
+.mobile-nav-toggle:hover span:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.mobile-nav-toggle:hover span:after {
+  transform: rotate(-45deg);
+  top: -2px;
+}
+@media (max-width: 775px) {
+  header {
+    width: auto;
+  }
+  header .nav-text {
+    margin-top: 5px;
+    transform: translateX(0);
+    transition: 0.1s;
+    color: #000;
+  }
+  header a {
+    margin: 0 1em;
+  }
+  header a svg {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+  }
+  header .logo svg {
+    height: 40px;
+    width: 40px;
+  }
+  header ul {
+    flex-direction: row;
+  }
+  header ul li {
+    margin: 0 1em;
+  }
+  header ul,
+  header .social-links {
+    display: none;
+  }
+  header .header-position {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+  }
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #a0a0a0;
+}
+.site-wrap {
+  display: flex;
+  min-height: 100vh;
+}
+@media (max-width: 775px) {
+  .site-wrap {
+    display: block;
+  }
+}
+main {
+  flex: 1;
+  height: 2000px;
 }

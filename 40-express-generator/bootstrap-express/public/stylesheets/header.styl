@@ -1,0 +1,160 @@
+header
+  width: 10rem
+  .header-position
+    padding: 2em 0
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-color: white
+    text-align: center
+  &:hover
+    .nav-text
+      transform: translateX(0)
+      transition: .2s
+  .nav-text
+    margin-top: 5px
+    transform: translateX(-100px)
+    transition: .1s
+    color: black
+  a
+    margin: 0 auto
+    padding: .85rem .6rem
+    display: flex
+    flex-direction: column
+    text-align: center
+    text-transform: uppercase
+    color: black
+    &:hover
+      text-decoration: none
+      color: black
+      opacity: .75
+      transform: translateY(3px)
+      transition: .1s
+      .logo--js-j-svg
+        fill: #4CAF50
+      .logo--js-s-svg
+        fill: #FFEB3B
+      .nav-link--home-svg
+        fill: #E91E63
+      .nav-link--about-svg
+        fill: #f44336
+      .nav-link--gallery-svg
+        fill: #9C27B0
+      .social-links--gmail
+        fill: #03A9F4
+    svg
+      margin: 0 auto
+      width: 40px
+      height: 40px
+  .logo
+    svg
+      height: 80px
+      width: 80px
+
+  ul
+    margin: 0 auto
+    padding: 0
+    display: flex
+    flex-direction: column
+    list-style: none
+
+  .social-links
+    margin: 0 auto
+    padding: 0
+
+// Button mobile-nav-toggle
+  .mobile-nav-toggle
+    margin-right: 20px
+    width: 45px
+    height: 50px
+    display: none
+    cursor: pointer
+
+    span,
+    span:before, 
+    span:after
+      content: ''
+      display: block
+      width: 100%
+      height: 3px
+      background: #333
+      position: relative
+
+      //background image SVG
+      // width: 45px
+      // height: 45px
+      // background: url(../images/settings.svg) center center no-repeat
+
+      transition: all .3s ease-in-out
+
+    span:before
+      top: 15px
+    span:after
+      bottom: 18px
+
+    &:hover span
+      background: transparent
+
+      //background image SVG
+      // background: url(../images/multiply.svg) center center no-repeat
+      // width: 40px
+      // height: 40px
+
+    &:hover span:before,
+    &:hover span:after
+      transform-origin: center
+      width: 50px
+    
+    &:hover span:before
+      transform: rotate(45deg)
+      top: 0
+
+    &:hover span:after
+      transform: rotate(-45deg)
+      top: -2px
+
+@media (max-width: 775px)
+  header
+    width: auto
+    // padding: 20px 0
+    .nav-text
+      margin-top: 5px
+      transform: translateX(0)
+      transition: .1s
+      color: black
+    a
+      margin: 0 1em
+      svg
+        margin: 0 auto
+        width: 20px
+        height: 20px
+    .logo
+      svg
+        height: 40px
+        width: 40px
+    ul
+      flex-direction: row
+      li
+        margin: 0 1em
+
+    ul, .social-links
+      display: none
+
+    .header-position
+      position: relative
+      top: auto
+      left: auto
+      bottom: auto
+      padding: 0
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+    .mobile-nav-toggle
+      display: flex
+      align-items: center
+
