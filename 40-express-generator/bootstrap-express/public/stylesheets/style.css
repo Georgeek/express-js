@@ -1,7 +1,19 @@
-header {
+.site-wrap .mobile-nav {
+  display: none;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.site-wrap .mobile-nav ul {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.site-wrap header {
   width: 10rem;
 }
-header .header-position {
+.site-wrap header .header-position {
   padding: 2em 0;
   position: fixed;
   top: 0;
@@ -13,17 +25,24 @@ header .header-position {
   background-color: #fff;
   text-align: center;
 }
-header:hover .nav-text {
+.site-wrap header:hover .nav-text {
   transform: translateX(0);
   transition: 0.2s;
 }
-header .nav-text {
+.site-wrap header .nav-text {
   margin-top: 5px;
   transform: translateX(-100px);
   transition: 0.1s;
   color: #000;
 }
-header a {
+.site-wrap header ul {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.site-wrap a {
   margin: 0 auto;
   padding: 0.85rem 0.6rem;
   display: flex;
@@ -32,48 +51,41 @@ header a {
   text-transform: uppercase;
   color: #000;
 }
-header a:hover {
+.site-wrap a:hover {
   text-decoration: none;
   color: #000;
   opacity: 0.75;
   transform: translateY(3px);
   transition: 0.1s;
 }
-header a:hover .logo--js-j-svg {
+.site-wrap a:hover .logo--js-j-svg {
   fill: #4caf50;
 }
-header a:hover .logo--js-s-svg {
+.site-wrap a:hover .logo--js-s-svg {
   fill: #ffeb3b;
 }
-header a:hover .nav-link--home-svg {
+.site-wrap a:hover .nav-link--home-svg {
   fill: #e91e63;
 }
-header a:hover .nav-link--about-svg {
+.site-wrap a:hover .nav-link--about-svg {
   fill: #f44336;
 }
-header a:hover .nav-link--gallery-svg {
+.site-wrap a:hover .nav-link--gallery-svg {
   fill: #9c27b0;
 }
-header a:hover .social-links--gmail {
+.site-wrap a:hover .social-links--gmail {
   fill: #03a9f4;
 }
-header a svg {
+.site-wrap a svg {
   margin: 0 auto;
   width: 40px;
   height: 40px;
 }
-header .logo svg {
+.site-wrap .logo svg {
   height: 80px;
   width: 80px;
 }
-header ul {
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-header .social-links {
+.site-wrap .social-links {
   margin: 0 auto;
   padding: 0;
 }
@@ -118,38 +130,68 @@ header .social-links {
   top: -2px;
 }
 @media (max-width: 775px) {
-  header {
+  .site-wrap .mobile-nav.is-open {
+    padding: 58px 0 15px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    transform: translateY(0%);
+  }
+  .site-wrap .mobile-nav.is-open ul {
+    justify-content: space-between;
+    margin: 0;
+  }
+  .site-wrap .mobile-nav.is-open ul li {
+    margin-right: 2em;
+  }
+  .site-wrap .mobile-nav.is-open a {
+    padding: 0.85rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .site-wrap .mobile-nav.is-open svg {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+  }
+  .site-wrap .mobile-nav.is-open .social-links {
+    margin: 0;
+  }
+  .site-wrap .mobile-nav.is-open .nav-text {
+    margin-top: 0.6em;
+  }
+  .site-wrap header {
     width: auto;
   }
-  header .nav-text {
+  .site-wrap header .nav-text {
     margin-top: 5px;
     transform: translateX(0);
     transition: 0.1s;
     color: #000;
   }
-  header a {
+  .site-wrap header a {
     margin: 0 1em;
   }
-  header a svg {
-    margin: 0 auto;
-    width: 20px;
-    height: 20px;
-  }
-  header .logo svg {
+  .site-wrap header .logo svg {
     height: 40px;
     width: 40px;
   }
-  header ul {
+  .site-wrap header ul {
     flex-direction: row;
   }
-  header ul li {
+  .site-wrap header ul li {
     margin: 0 1em;
   }
-  header ul,
-  header .social-links {
+  .site-wrap header ul,
+  .site-wrap header .social-links {
     display: none;
   }
-  header .header-position {
+  .site-wrap header .header-position {
     position: relative;
     top: auto;
     left: auto;
@@ -159,7 +201,7 @@ header .social-links {
     justify-content: space-between;
     align-items: center;
   }
-  header .mobile-nav-toggle {
+  .site-wrap header .mobile-nav-toggle {
     display: flex;
     align-items: center;
   }
