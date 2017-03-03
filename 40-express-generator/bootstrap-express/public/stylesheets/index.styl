@@ -1,0 +1,42 @@
+main
+// Flex Classes
+	.flex
+		padding: 2rem 0
+		display: flex
+		flex-direction: row
+		&--center
+			justify-content: center
+		&--space-around
+			justify-content: space-around
+		&--center
+			justify-content: center
+	.order-first
+		order: -1
+
+// Columns
+.col-1
+	max-width: 300px
+	margin: 0 10px
+
+.col-2
+	max-width: 620px
+	margin: 0 10px
+	padding: 2rem
+	border-radius: 2px
+	box-shadow: -3px 3px 20px 2px #ccc
+
+.col-50
+	width: 50%
+
+.push-right
+	margin-left: 330px 
+
+@media (max-width: 640px)
+	main .flex
+		display: block
+	.col-1
+		max-width: 100%
+	.col-50
+		width: auto
+	.push-right
+		margin-left: 10px

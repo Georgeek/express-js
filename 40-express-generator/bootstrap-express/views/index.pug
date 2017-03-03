@@ -1,6 +1,29 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
+	h1= title
+
+	section.about.flex.flex--center
+
+		.col-1.push-right
+			h2 This is my Home Page,
+			p.home-lead so deal with it...
+
+	.flex.flex--space-around
+			.col-1
+				p Секция 2
+			.col-1.order-first
+				p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
+
+
+	.flex.flex--center
+			.col-2
+				p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
+
+
+	.flex.flex--center
+		.col-50.flex.flex--center
+			.col-1
+					p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
+		.col-50
+				p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
