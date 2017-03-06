@@ -1,11 +1,12 @@
-// fonts
-@import './fonts'
+@import './0-tools/fonts'
 
-@import './header'
-@import './index'
+@import './1-modules/buttons'
 
-// index section
-@import './section-about'
+@import './2-sections/header'
+@import './2-sections/section-about'
+@import './2-sections/section-youtube'
+
+@import './3-layouts/index'
 
 body
 	font: 1.5rem "Slabo 27px", Helvetica, Arial, sans-serif
@@ -32,3 +33,8 @@ h1
 // index Section about
 .home-lead
 	line-height: 1
+
+	&.outdented
+		text-indent: -.8em
+		@media (max-width 640px)
+			text-indent: 0

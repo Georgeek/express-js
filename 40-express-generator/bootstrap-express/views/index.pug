@@ -3,20 +3,30 @@ extends layout
 block content
 	h1= title
 
-	section.about.flex.flex--center
+	section.about
+		.flex.flex--center
+			.col-1.push-right
+				h2 This is my personal Home Page,
+				p.home-lead so you have to deal with it and keep moving forward...
+	
+	section.youtube
+		.flex.flex--center
+			.col-1
+				.video-strip
+			.col-1.order-first
+				p.home-lead.outdented ...You want to sell Peugeot to Japan? There is nothing impossible! (Taxi 2)
+				a(href="https://vk.com/georgeek").home-cta Watch on VKontakte
 
-		.col-1.push-right
-			h2 This is my Home Page,
-			p.home-lead so deal with it...
-
-	.flex.flex--space-around
+	section
+		.flex.flex--space-around
 			.col-1
 				p Секция 2
 			.col-1.order-first
 				p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
 
 
-	.flex.flex--center
+	section
+		.flex.flex--center
 			.col-2
 				p CTA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim vitae impedit, beatae aperiam inventore blanditiis. Aperiam nemo praesentium id, odit ex. Voluptas rem vero sed fugiat cum nulla minus, dolores.
 

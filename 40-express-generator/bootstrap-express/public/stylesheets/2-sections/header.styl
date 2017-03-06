@@ -3,7 +3,6 @@
 		display: none
 		transform: translateY(-100%)
 		transition: all .3s ease-in-out
-
 		ul
 			margin: 0 auto
 			padding: 0
@@ -40,37 +39,11 @@
 			flex-direction: column
 			list-style: none
 
-	a
+// SVG icons header
+	svg
 		margin: 0 auto
-		padding: .85rem .6rem
-		display: flex
-		flex-direction: column
-		text-align: center
-		// text-transform: uppercase
-		text-decoration: none
-		color: black
-		&:hover
-			text-decoration: none
-			color: black
-			opacity: .75
-			transform: translateY(3px)
-			transition: .1s
-			.logo--js-j-svg
-				fill: #4CAF50
-			.logo--js-s-svg
-				fill: #FFEB3B
-			.nav-link--home-svg
-				fill: #E91E63
-			.nav-link--about-svg
-				fill: #f44336
-			.nav-link--gallery-svg
-				fill: #9C27B0
-			.social-links--gmail
-				fill: #03A9F4
-		svg
-			margin: 0 auto
-			width: 40px
-			height: 40px
+		width: 40px
+		height: 40px
 	.logo
 		svg
 			height: 80px
@@ -96,7 +69,6 @@
 			height: 3px
 			background: #333
 			position: relative
-
 			transition: all .3s ease-in-out
 
 		span:before
@@ -139,7 +111,7 @@
 					margin-right: .3em
 					&:last-child
 						margin-right: 0
-			a
+			a.nav-bar
 				padding: .7rem .6rem
 				display: flex
 				flex-direction: column
@@ -164,7 +136,7 @@
 				transform: translateX(0)
 				transition: .1s
 				color: black
-			a
+			a.nav-bar
 				margin: 0 1em
 
 			.logo
