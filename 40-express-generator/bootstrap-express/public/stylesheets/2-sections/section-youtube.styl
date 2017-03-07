@@ -7,6 +7,13 @@ section.youtube
 	.home-cta
 		color: #ea4d4d
 	
+	.flex-video
+		box-shadow: 0 4px 40px 3px rgba(0, 0, 0, .5)
+		transform: scale(1.8)
+
+		@media (max-width: 1225px)
+			transform: scale(1)
+
 	.video-strip
 		margin: -2rem 0
 		position: absolute
@@ -17,5 +24,20 @@ section.youtube
 		background-position: center top
 		background-repeat: repeat-y
 		background-size: 75%
+
+		@media(max-width: 640px)
+			display: none
 	.col-1
 		position: relative
+		height: 400px
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+		@media (max-width: 640px)
+			height: auto
+			display: block
+			padding: 50px 20px
+
+			&:last-child
+				padding: 0 20px 50px
