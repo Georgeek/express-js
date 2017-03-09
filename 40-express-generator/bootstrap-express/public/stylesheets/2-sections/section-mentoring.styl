@@ -1,6 +1,7 @@
 section.mentoring
 	background: #809dcc
 	color: white
+	height: 550px
 	overflow: hidden
 
 	.home-cta
@@ -15,7 +16,11 @@ section.mentoring
 		margin: -2rem 0
 		height: calc(100% + 4rem)
 		list-style: none
-		background: pink
+		top: 800px
+		transition: all .3s ease-in-out
+
+		&.launched
+			top: 0
 
 
 	.face
@@ -31,6 +36,11 @@ section.mentoring
 		p, cite
 			font-size: 18px
 
+		& .back-btn
+			background: white
+			background-size: 15px 25px
+			display: none
+
 	.bubble
 		left: 100%
 		bottom: 50%
@@ -43,7 +53,7 @@ section.mentoring
 		border-radius: 40px 40px 40px 4px
 		border: 3px solid white
 		pointer-events: none
-		transition: all .1s cubic-bezier(0, .53, .34, 1.5)
+		transition: all .4s cubic-bezier(0, .53, .34, 1.5)
 		transform: scale(0)
 		transform-origin: bottom left
 
@@ -51,3 +61,25 @@ section.mentoring
 	.face.has-bubble-open .bubble
 		opacity: 1
 		transform: scale(1)
+
+@media (max-width: 640px)
+	section.mentoring
+		height: auto
+
+		.faces
+			margin: 0
+			top: 230px
+			left: 0
+			width: 115px * 11
+		.face
+			display: inline-block
+			margin-right: 35px
+
+			& .back-btn
+				display: inline-block
+
+		.bubble
+			bottom: 100px
+			left: 0
+			box-sizing: border-box
+			margin-left: 0

@@ -1,30 +1,78 @@
 $(window).scroll(function() {
 	youtubeVidScroll();
+	startMentoring();
 });
-
-function youtubeVidScroll() {
-	var wScroll = $(window).scrollTop();
-	$('.video-strip').css('background-position', 'center -'+ wScroll +'px');
-	// console.log(wScroll);
-}
 
 $(function() {
 	mentoringBubbleClick();
 });
 
+$(window).resize(function() {
+	if( $(window).width() > 640 ) {
+		mentoringWideStart();
+	} else {
+		mentoringNarrowStart();
+	}
+});
+
+function youtubeVidScroll() {
+	var wScroll = $(window).scrollTop();
+	$('.video-strip').css('background-position', 'center -'+ wScroll +'px');
+}
+
 function mentoringBubbleClick() {
 	$('.face').on('click', function() {
 		var faceTop = $(this).position().top,
-			verticalMath = faceTop - 230;
-		
-		console.log(verticalMath);
-		$(this).addClass('has-bubble-open')
+			verticalMath = -1 * (faceTop - 230),
+			faceLeft = $(this).position().left,
+			horizontalMath = 0 - faceLeft;
+
+		if( $(window).width() > 640 ) {
+			$(this).parent().css('top', + verticalMath +'px');
+		} else {
+			if( $(this).hasClass('back-btn') ) {
+				mentoringNarrowStart();
+			} else {
+				$(this).parent().css('left', + horizontalMath +'px');
+			}
+		}
+		if( !$(this).hasClass('back-btn')) {
+			$(this).addClass('has-bubble-open')
 			.siblings().removeClass('has-bubble-open');
-
-		// when i click a face get the distance of the face from its parent
-		// and then move the whole container up 115px + count oh hover
-		// after we add is-open class to the face, pop the baloon
-		$
-
+		}
 	});
+}
+
+function startMentoring() {
+	var wScroll = $(window).scrollTop();
+
+	if($('section.mentoring').offset().top - 500 < wScroll) {
+		if( $(window).width() > 640 ) {
+			$('.faces').addClass('launched');
+			
+			if( !$('.face').hasClass('has-bubble-open') && $(this).hasClass('back-btn')) {
+				setTimeout(function() {
+					$('.face:nth-child(3)').addClass('has-bubble-open');
+				}, 500);
+			}
+		} else {
+			mentoringNarrowStart();
+		}
+	}
+}
+
+function mentoringWideStart() {
+	$('.faces').css({
+		'top': '0',
+		'left': '0'
+	});
+	$('.face:nth-child(3)').addClass('has-bubble-open').siblings().removeClass('has-bubble-open');
+}
+
+function mentoringNarrowStart() {
+	$('.faces').css({
+		'top': '230px',
+		'left': '0'
+	});
+	$('.face').first().addClass('has-bubble-open').siblings().removeClass('has-bubble-open');
 }

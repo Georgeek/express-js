@@ -326,6 +326,7 @@ section.youtube .col-1 {
 section.mentoring {
   background: #809dcc;
   color: #fff;
+  height: 550px;
   overflow: hidden;
 }
 section.mentoring .home-cta {
@@ -340,7 +341,11 @@ section.mentoring .faces {
   margin: -2rem 0;
   height: calc(100% + 4rem);
   list-style: none;
-  background: #ffc0cb;
+  top: 800px;
+  transition: all 0.3s ease-in-out;
+}
+section.mentoring .faces.launched {
+  top: 0;
 }
 section.mentoring .face {
   position: relative;
@@ -357,6 +362,11 @@ section.mentoring .face p,
 section.mentoring .face cite {
   font-size: 18px;
 }
+section.mentoring .face .back-btn {
+  background: #fff;
+  background-size: 15px 25px;
+  display: none;
+}
 section.mentoring .bubble {
   left: 100%;
   bottom: 50%;
@@ -369,13 +379,37 @@ section.mentoring .bubble {
   border-radius: 40px 40px 40px 4px;
   border: 3px solid #fff;
   pointer-events: none;
-  transition: all 0.1s cubic-bezier(0, 0.53, 0.34, 1.5);
+  transition: all 0.4s cubic-bezier(0, 0.53, 0.34, 1.5);
   transform: scale(0);
   transform-origin: bottom left;
 }
 section.mentoring .face.has-bubble-open .bubble {
   opacity: 1;
   transform: scale(1);
+}
+@media (max-width: 640px) {
+  section.mentoring {
+    height: auto;
+  }
+  section.mentoring .faces {
+    margin: 0;
+    top: 230px;
+    left: 0;
+    width: 1265px;
+  }
+  section.mentoring .face {
+    display: inline-block;
+    margin-right: 35px;
+  }
+  section.mentoring .face .back-btn {
+    display: inline-block;
+  }
+  section.mentoring .bubble {
+    bottom: 100px;
+    left: 0;
+    box-sizing: border-box;
+    margin-left: 0;
+  }
 }
 main .flex {
   padding: 2rem 0;
@@ -433,6 +467,9 @@ main .order-first {
   text-indent: -0.7em;
 }
 @media (max-width: 640px) {
+  .home-lead {
+    text-align: center;
+  }
   .home-lead.outdented {
     text-indent: 0;
   }
