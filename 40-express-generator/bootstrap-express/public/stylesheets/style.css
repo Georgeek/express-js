@@ -326,9 +326,56 @@ section.youtube .col-1 {
 section.mentoring {
   background: #809dcc;
   color: #fff;
+  overflow: hidden;
 }
 section.mentoring .home-cta {
   color: #2cb4db;
+}
+section.mentoring .home-lead {
+  margin-top: 250px;
+}
+section.mentoring .faces {
+  position: relative;
+  padding: 0;
+  margin: -2rem 0;
+  height: calc(100% + 4rem);
+  list-style: none;
+  background: #ffc0cb;
+}
+section.mentoring .face {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 35px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+section.mentoring .face p,
+section.mentoring .face cite {
+  font-size: 18px;
+}
+section.mentoring .bubble {
+  left: 100%;
+  bottom: 50%;
+  margin-left: 10px;
+  padding: 20px;
+  width: 15em;
+  position: absolute;
+  opacity: 0;
+  background: rgba(0,0,0,0.8);
+  border-radius: 40px 40px 40px 4px;
+  border: 3px solid #fff;
+  pointer-events: none;
+  transition: all 0.1s cubic-bezier(0, 0.53, 0.34, 1.5);
+  transform: scale(0);
+  transform-origin: bottom left;
+}
+section.mentoring .face.has-bubble-open .bubble {
+  opacity: 1;
+  transform: scale(1);
 }
 main .flex {
   padding: 2rem 0;
@@ -379,6 +426,17 @@ main .order-first {
     margin-left: 10px;
   }
 }
+.home-lead {
+  line-height: 1;
+}
+.home-lead.outdented {
+  text-indent: -0.7em;
+}
+@media (max-width: 640px) {
+  .home-lead.outdented {
+    text-indent: 0;
+  }
+}
 body {
   font: 1.5rem "Slabo 27px", Helvetica, Arial, sans-serif;
   background-color: #edf3ff;
@@ -402,15 +460,4 @@ h1 {
   color: #000;
   font-weight: 700;
   font-size: 4rem;
-}
-.home-lead {
-  line-height: 1;
-}
-.home-lead.outdented {
-  text-indent: -0.8em;
-}
-@media (max-width: 640px) {
-  .home-lead.outdented {
-    text-indent: 0;
-  }
 }

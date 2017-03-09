@@ -19,13 +19,27 @@ block content
 				p.home-lead.outdented ...You want to sell Peugeot to Japan? There is nothing impossible! (Taxi 2)
 				a(href="https://vk.com/georgeek").home-cta Watch on VKontakte
 
+
+	mixin face
+		li.face(style="background-image:url(http://fillmurray.com/80/80); background-repeat:no-repeat;")
+			.bubble
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, amet, facilis esse autem culpa assumenda repudiandae quidem necessitatibus cupiditate a, aperiam dolor suscipit, reprehenderit officia nihil. Nesciunt doloribus sit, sint.
+				cite - Bill Murray
 	section.mentoring
 		.flex.flex--center
 			.col-1
-				p Секция 2!!!
+				ul.faces
+					+face
+					+face
+					li.face.has-bubble-open(style="background-image:url(http://fillmurray.com/80/80); background-repeat:no-repeat;")
+						.bubble
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, amet, facilis esse autem culpa assumenda repudiandae quidem necessitatibus cupiditate a, aperiam dolor suscipit, reprehenderit officia nihil. Nesciunt doloribus sit, sint.
+							cite - Bill Murray
+					+face
+					+face
 			.col-1
-				p.home-lead.outdented ...You want to sell Peugeot to Japan? There is nothing impossible! (Taxi 2)
-				a(href="https://vk.com/georgeek").home-cta Watch on VKontakte
+				p.home-lead.outdented ...Feedback is like an second argument of the function - a Callback...
+				a(href="https://github.com/Georgeek").home-cta Fork on GitHub
 
 	section
 		.flex.flex--center
