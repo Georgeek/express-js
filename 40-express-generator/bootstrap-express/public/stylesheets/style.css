@@ -362,9 +362,12 @@ section.mentoring .face p,
 section.mentoring .face cite {
   font-size: 18px;
 }
-section.mentoring .face .back-btn {
+section.mentoring .back-btn {
   background: #fff;
-  background-size: 15px 25px;
+  background-image: url("../images/return.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75%;
   display: none;
 }
 section.mentoring .bubble {
