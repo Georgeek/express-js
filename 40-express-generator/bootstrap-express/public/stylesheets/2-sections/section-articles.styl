@@ -1,0 +1,66 @@
+section.articles
+	background: #FFB273
+
+	.col-1
+		display: flex
+		align-items: center
+	.flex
+		padding: 0
+
+	.article-wrap
+		// margin: -2rem 0
+		// clearfix()
+
+	.home-cta
+		background: #3d96cb
+		color: white
+	
+	.article-thumb
+		display: block
+		background-repeat: no-repeat
+		background-size: cover
+		// background-position: center
+		width: 25%
+		float: left
+		position: relative
+		overflow: hidden
+
+		&:after
+			content: ''
+			display: block
+			padding-top: 100%
+
+	.article-meta
+		position: absolute
+		padding: 10px
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: fade-out(pink, .3)
+		color: white
+		opacity: 0
+		transform: translate(0%, 100%) scale(.5)
+		transition: all 200ms ease-in-out
+	
+	.name, .date
+		font-size: 16px
+	
+	.date
+		font-style: italic
+	
+	.article-thumb:hover .article-meta
+		opacity: 1
+		transform: translate(0%, 0%) scale(1)
+
+	@media (max-width: 640px)
+		.description-wrap
+			margin-top: 100px
+clearfix()
+	zoom: 1
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
