@@ -4,12 +4,11 @@ section.articles
 	.col-1
 		display: flex
 		align-items: center
-	.flex
-		padding: 0
 
 	.article-wrap
-		// margin: -2rem 0
-		// clearfix()
+		margin: -2rem 0
+		display: flex
+		flex-wrap: wrap
 
 	.home-cta
 		background: #3d96cb
@@ -45,6 +44,7 @@ section.articles
 	
 	.name, .date
 		font-size: 16px
+		line-height: 1.2
 	
 	.date
 		font-style: italic
@@ -55,12 +55,8 @@ section.articles
 
 	@media (max-width: 640px)
 		.description-wrap
-			margin-top: 100px
-clearfix()
-	zoom: 1
-	&:before,
-	&:after
-		content: ""
-		display: table
-	&:after
-		clear: both
+			margin-top: 50px
+
+	@media (max-width: 999px) and (min-width: 640px)
+		.article-thumb
+			width: 33.3%

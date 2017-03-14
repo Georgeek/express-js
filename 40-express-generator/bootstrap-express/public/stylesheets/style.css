@@ -421,8 +421,10 @@ section.articles .col-1 {
   display: flex;
   align-items: center;
 }
-section.articles .flex {
-  padding: 0;
+section.articles .article-wrap {
+  margin: -2rem 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 section.articles .home-cta {
   background: #3d96cb;
@@ -458,6 +460,7 @@ section.articles .article-meta {
 section.articles .name,
 section.articles .date {
   font-size: 16px;
+  line-height: 1.2;
 }
 section.articles .date {
   font-style: italic;
@@ -468,7 +471,12 @@ section.articles .article-thumb:hover .article-meta {
 }
 @media (max-width: 640px) {
   section.articles .description-wrap {
-    margin-top: 100px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 999px) and (min-width: 640px) {
+  section.articles .article-thumb {
+    width: 33.3%;
   }
 }
 main .flex {
