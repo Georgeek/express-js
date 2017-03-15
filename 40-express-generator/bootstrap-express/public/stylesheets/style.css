@@ -558,6 +558,36 @@ section.articles .article-thumb:hover .article-meta {
     transform: scale3d(1, 1, 1);
   }
 }
+section.vine {
+  background-color: #00bf8f;
+  color: #fff;
+}
+section.vine .home-cta {
+  color: #00bf8f;
+}
+section.vine .coub {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+}
+section.vine .description {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  section.vine .description {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 1000px) {
+  section.vine .col-1 {
+    text-align: center;
+  }
+  section.vine .coub {
+    width: auto;
+    height: 300px;
+  }
+}
 main .flex {
   padding: 2rem 0;
   display: flex;
