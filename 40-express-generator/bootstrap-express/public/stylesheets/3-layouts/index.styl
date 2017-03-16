@@ -19,11 +19,9 @@ main
 	width: 300px
 
 .col-2
-	max-width: 620px
 	margin: 0 10px
-	padding: 2rem
-	border-radius: 2px
-	box-shadow: -3px 3px 20px 2px #ccc
+	width: 100%
+	max-width: 620px
 
 .col-50
 	width: 50%
@@ -34,12 +32,9 @@ main
 @media (max-width: 640px)
 	main .flex
 		display: block
-	.col-1
-		width: auto
-	.col-50
+	.col-1, .col-2, .col-50
 		width: auto
 	.push-right
-		margin-left: auto
 		margin-left: 10px
 
 // typography

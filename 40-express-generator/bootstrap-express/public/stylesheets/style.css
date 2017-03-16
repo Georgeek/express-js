@@ -635,6 +635,99 @@ section.portfolio .home-cta {
   font-size: 24px;
   color: #ea4c89;
 }
+section.notes {
+  background: #ba9e44;
+  color: #fff;
+}
+section.notes .home-lead {
+  text-align: center;
+  font-size: 30px;
+}
+section.notes .col-1 {
+  padding-left: 30px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.8;
+}
+section.notes .col-1:first-child {
+  padding-left: 0;
+  padding-right: 30px;
+  text-align: right;
+  border-right: solid 2px #fff;
+}
+@media (max-width: 640px) {
+  section.notes .col-1 {
+    padding: 0 10px;
+  }
+  section.notes .col-1:first-child {
+    padding: 0 10px;
+    text-align: left;
+    border-bottom: 3px solid #fff;
+    border-right: none;
+  }
+}
+section.notes a {
+  color: #fff;
+  text-decoration: none;
+}
+section.notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.notes .form-display {
+  margin: 50px 0;
+  background: rgba(255,255,255,0.3);
+  border: 3px solid #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  display: flex;
+}
+@media (max-width: 640px) {
+  section.notes .form-display {
+    display: block;
+  }
+}
+section.notes .form-display .field-group {
+  position: relative;
+  flex: 2;
+}
+section.notes .form-display .field-group:first-child {
+  border-right: 4px #fff solid;
+}
+@media (max-width: 640px) {
+  section.notes .form-display .field-group:first-child {
+    border-right: none;
+    border-bottom: 4px solid #fff;
+  }
+}
+section.notes .form-display input {
+  padding: 0;
+  position: relative;
+  background: none;
+  border: 0;
+  display: block;
+  height: 60px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #fff;
+}
+section.notes .form-display input:focus {
+  outline: none;
+}
+section.notes .form-display input[type="submit"] {
+  flex: 1;
+  background: #fff;
+  color: #ba9e44;
+  font-size: 24px;
+  padding: 0 15px;
+}
+section.notes .form-display label {
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+  left: 10px;
+}
 main .flex {
   padding: 2rem 0;
   display: flex;
@@ -657,11 +750,9 @@ main .order-first {
   width: 300px;
 }
 .col-2 {
-  max-width: 620px;
   margin: 0 10px;
-  padding: 2rem;
-  border-radius: 2px;
-  box-shadow: -3px 3px 20px 2px #ccc;
+  width: 100%;
+  max-width: 620px;
 }
 .col-50 {
   width: 50%;
@@ -673,14 +764,12 @@ main .order-first {
   main .flex {
     display: block;
   }
-  .col-1 {
-    width: auto;
-  }
+  .col-1,
+  .col-2,
   .col-50 {
     width: auto;
   }
   .push-right {
-    margin-left: auto;
     margin-left: 10px;
   }
 }
