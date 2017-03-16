@@ -728,6 +728,49 @@ section.notes .form-display label {
   font-size: 12px;
   left: 10px;
 }
+section.podcast {
+  background: #ffc0cb;
+  color: #fff;
+}
+section.podcast .podcast-content {
+  display: flex;
+}
+section.podcast .podcast-thumb {
+  margin-right: 30px;
+}
+section.podcast .podcast-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.podcast .title {
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+section.podcast .web {
+  color: #fff;
+  background: #8d16de;
+}
+section.podcast .itunes {
+  color: #fff;
+  background: #13cbdf;
+}
+footer.home-footer a {
+  background: #e24040;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 6;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+  transition: background 200ms ease-in-out;
+}
+footer.home-footer a:hover {
+  background: #de2727;
+}
 main .flex {
   padding: 2rem 0;
   display: flex;
