@@ -124,9 +124,35 @@
 		.siblings().removeClass('is-emph');
 	}
 
+	function swapDesignBackground () {
+		var $tile = $('.design-img-link');
+
+		// hover ON
+		$tile.hover(function () {
+			var $this = $(this),
+				$container = $this.parent().parent().parent();
+
+			$container.css({
+				'background-color': $this.data('color')
+			});
+
+		// hover OFF
+		},function () {
+			var $this = $(this),
+				$container = $this.parent().parent().parent();
+
+			$container.css({
+				'background-color': $container.data('origin-color')
+			});
+		});
+	}
+
 	$(document).ready(function() {
 		setInterval(function() {
 			articleTada();
 		}, 4000);
+
+		swapDesignBackground();
+
 	});
 })(jQuery);

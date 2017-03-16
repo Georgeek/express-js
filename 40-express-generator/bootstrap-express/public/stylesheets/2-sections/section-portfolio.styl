@@ -1,3 +1,45 @@
 section.portfolio
-	background: pink
-	height: 200px
+	color: white
+	
+	.flex
+		padding: 0
+
+	.home-lead
+		text-align: center
+		font-size: 30px
+
+	.github, .elsewhere
+		padding: 2rem 0
+		transition: background-color 300ms ease-in-out
+
+	.github
+		background-color: #ea4c89
+	
+	.elsewhere
+		background-color: #1769ff
+
+		.home-cta
+			color: #1769ff
+
+	.portfolio-wrap
+		display: flex
+		flex-wrap: wrap
+
+	.design-img-link
+		width: calc(50% - 14px)
+		border: 2px solid white
+		box-shadow: 0 3px 10px rgba(0, 0, 0, .3)
+		margin: 5px
+		transition: transform 200ms ease-in-out
+
+		&:hover
+			transform: scale(1.1)
+
+		img
+			width: 100%
+			display: block
+
+	.home-cta
+		margin: 20px 0
+		font-size: 24px
+		color: #ea4c89

@@ -422,7 +422,7 @@ section.articles .col-1 {
   align-items: center;
 }
 section.articles .article-wrap {
-  margin: -2rem 0;
+  margin: -2rem 0.7rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -589,8 +589,51 @@ section.vine .description {
   }
 }
 section.portfolio {
-  background: #ffc0cb;
-  height: 200px;
+  color: #fff;
+}
+section.portfolio .flex {
+  padding: 0;
+}
+section.portfolio .home-lead {
+  text-align: center;
+  font-size: 30px;
+}
+section.portfolio .github,
+section.portfolio .elsewhere {
+  padding: 2rem 0;
+  transition: background-color 300ms ease-in-out;
+}
+section.portfolio .github {
+  background-color: #ea4c89;
+}
+section.portfolio .elsewhere {
+  background-color: #1769ff;
+}
+section.portfolio .elsewhere .home-cta {
+  color: #1769ff;
+}
+section.portfolio .portfolio-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.portfolio .design-img-link {
+  width: calc(50% - 14px);
+  border: 2px solid #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  margin: 5px;
+  transition: transform 200ms ease-in-out;
+}
+section.portfolio .design-img-link:hover {
+  transform: scale(1.1);
+}
+section.portfolio .design-img-link img {
+  width: 100%;
+  display: block;
+}
+section.portfolio .home-cta {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #ea4c89;
 }
 main .flex {
   padding: 2rem 0;
