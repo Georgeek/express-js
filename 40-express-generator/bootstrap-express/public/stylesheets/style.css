@@ -78,9 +78,14 @@
   position: absolute;
 }
 .site-wrap .mobile-nav {
-  display: none;
+  padding: 58px 0 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
   transform: translateY(-100%);
-  transition: all 0.3s ease-in-out;
+  transition: all 2.3s ease-in-out;
 }
 .site-wrap .mobile-nav ul {
   margin: 0 auto;
@@ -119,6 +124,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   list-style: none;
 }
 svg {
@@ -158,30 +164,24 @@ svg {
 .mobile-nav-toggle span:after {
   bottom: 18px;
 }
-.mobile-nav-toggle:hover span {
+.mobile-nav-toggle span.is-open {
   background: transparent;
 }
-.mobile-nav-toggle:hover span:before,
-.mobile-nav-toggle:hover span:after {
+.mobile-nav-toggle span.is-open:before,
+.mobile-nav-toggle span.is-open:after {
   transform-origin: center;
   width: 50px;
 }
-.mobile-nav-toggle:hover span:before {
+.mobile-nav-toggle span.is-open:before {
   transform: rotate(45deg);
   top: 0;
 }
-.mobile-nav-toggle:hover span:after {
+.mobile-nav-toggle span.is-open:after {
   transform: rotate(-45deg);
   top: -2px;
 }
 @media (max-width: 775px) {
   .site-wrap .mobile-nav.is-open {
-    padding: 58px 0 0;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    background: #fff;
     transform: translateY(0%);
   }
   .site-wrap .mobile-nav.is-open ul {
@@ -408,10 +408,10 @@ section.mentoring .face.has-bubble-open .bubble {
     display: inline-block;
   }
   section.mentoring .bubble {
+    margin-left: 0;
     bottom: 100px;
     left: 0;
     box-sizing: border-box;
-    margin-left: 0;
   }
 }
 section.articles {
@@ -422,7 +422,7 @@ section.articles .col-1 {
   align-items: center;
 }
 section.articles .article-wrap {
-  margin: -2rem 0.7rem;
+  margin: -2rem 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -570,6 +570,11 @@ section.vine .coub {
   height: 400px;
   box-shadow: 0 3px 20px rgba(0,0,0,0.9);
 }
+@media (max-width: 250px) {
+  section.vine .coub {
+    display: none;
+  }
+}
 section.vine .description {
   display: flex;
   align-items: center;
@@ -656,9 +661,6 @@ section.notes .col-1:first-child {
   border-right: solid 2px #fff;
 }
 @media (max-width: 640px) {
-  section.notes .col-1 {
-    padding: 0 10px;
-  }
   section.notes .col-1:first-child {
     padding: 0 10px;
     text-align: left;
@@ -701,7 +703,6 @@ section.notes .form-display .field-group:first-child {
   }
 }
 section.notes .form-display input {
-  padding: 0;
   position: relative;
   background: none;
   border: 0;
@@ -734,6 +735,11 @@ section.podcast {
 }
 section.podcast .podcast-content {
   display: flex;
+}
+@media (max-width: 440px) {
+  section.podcast .podcast-content {
+    display: block;
+  }
 }
 section.podcast .podcast-thumb {
   margin-right: 30px;
@@ -770,6 +776,11 @@ footer.home-footer a {
 }
 footer.home-footer a:hover {
   background: #de2727;
+}
+@media (max-width: 640px) {
+  footer.home-footer a {
+    font-size: 24px;
+  }
 }
 main .flex {
   padding: 2rem 0;
@@ -837,7 +848,6 @@ body {
 }
 .site-wrap {
   display: flex;
-  min-height: 100vh;
 }
 @media (max-width: 775px) {
   .site-wrap {
@@ -853,6 +863,11 @@ h1 {
   color: #000;
   font-weight: 700;
   font-size: 4rem;
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 a {
   text-decoration: none;

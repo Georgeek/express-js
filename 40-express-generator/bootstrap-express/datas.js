@@ -14,6 +14,10 @@ const store = {
 	projects: {
 		title: 'Some projects',
 		content: 'All projects that I\'ve created'
+	},
+	profile: {
+		title: 'Profile page',
+		content: 'Test profile page'
 	}
 };
 

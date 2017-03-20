@@ -156,3 +156,44 @@
 
 	});
 })(jQuery);
+
+(function ($) {
+
+	function onMobileToggleClick(e) {
+		var $this = $(this),
+			$navigation = $('.mobile-nav');
+		
+		$this.children().toggleClass('is-open');
+		$navigation.toggleClass('is-open');
+	}
+
+	function onBlankLinkClick(e) {
+
+		var $body = $('html, body'),
+			$this = $(this),
+			href = $this.attr('href'),
+			$target = $(href);
+
+		if($target.length == 0)
+			return;
+
+		e.preventDefault();
+
+		$body.animate({
+			scrollTop: $target.offset().top
+		}, easing, 800);
+	}
+
+	function bindigs () {
+		//toggle mobileNav
+		$('.mobile-nav-toggle').on('click', onMobileToggleClick);
+		
+		// smooth scroll
+		// $('a[href^="#"]').on('click', onBlankLinkClick);
+	}
+
+	$(document).ready(function() {
+		bindigs();
+	});
+
+})(jQuery);

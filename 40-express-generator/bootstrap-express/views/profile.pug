@@ -1,0 +1,172 @@
+doctype html
+html
+	head
+		title= title
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		section.title
+			h1= title
+
+		section.about
+			.flex.flex--center
+				.col-1.push-right
+					h2 This is my personal Home Page,
+					p.home-lead so you have to deal with it and keep moving forward...
+
+		section.youtube
+			.flex.flex--space-around
+				.col-1
+					.video-strip
+					.flex-video
+						iframe(width="854" height="480" src="https://www.youtube.com/embed/_PI3NlIDxJw?ecver=1" frameborder="0" allowfullscreen)
+				.col-1.order-first
+					p.home-lead.outdented ...You want to sell Peugeot to Japan? There is nothing impossible! (Taxi 2)
+					a(href="https://vk.com/georgeek").home-cta Watch on VKontakte
+
+
+		mixin face(face, words, name)
+			li.face(style='background-image:url(' + face '); background-repeat:no-repeat;')
+				.bubble
+					p #{words}
+					cite - #{name}
+		section.mentoring
+			.flex.flex--center
+				.col-1
+					ul.faces
+						+face('http://fillmurray.com/80/80','Greate job, George, awesome work', 'Bill Murray')
+						+face('http://www.placecage.com/g/80/80','His is just do his job :)', 'Murray Bill')
+						+face('http://www.placecage.com/80/80','Did you know, that we are good friends??', 'Билл Мюррей')
+						+face('http://www.placecage.com/c/80/80','Oh, Bill Murray here, how awesome!', 'Мюррей Билл')
+						+face('http://fillmurray.com/80/80','True, these guys so true, yo', 'Известный актер')
+						+face('http://www.placecage.com/g/80/80','Greate job, George, awesome work', 'Bill Murray')
+						+face('http://www.placecage.com/80/80','His is just do his job :)', 'Murray Bill')
+						+face('http://www.placecage.com/c/80/80','Did you know, that we are good friends??', 'Билл Мюррей')
+						+face('http://fillmurray.com/g/80/80','Oh, Bill Murray here, how awesome!', 'Мюррей Билл')
+						+face('http://fillmurray.com/80/80','True, these guys so true, yo', 'Известный актер')
+						li.face.back-btn
+				.col-1
+					p.home-lead.outdented ...Feedback is like an second argument of the function - a Callback...
+					a(href="https://github.com/Georgeek").home-cta Fork on GitHub
+
+		mixin thumb
+			a(href="" style="background-image: url(http://www.placecage.com/230/500)").article-thumb
+				.article-meta
+					.name Article name
+					.date Sep 25, 1988
+		section.articles
+			.flex.flex--center
+
+				.col-50
+					.article-wrap
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+						+thumb
+
+				.col-50.flex.flex--center.order-first
+					.col-1
+						.description-wrap
+							p.home-lead.outdented ...Feedback is like an second argument of the function - a Callback...
+							a(href="").home-cta See Feedback
+
+		section.vine
+			.flex.flex--space-around
+				.col-1
+					iframe.coub(src="//coub.com/embed/rspt7?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen="true" frameborder="0" width="480" height="480")
+					script(async src="//c-cdn.coub.com/embed-runner.js")
+				.col-1.description
+					.description-wrap
+						p.home-lead.outdented ...You want to sell Peugeot to Japan? There is nothing impossible! (Taxi 2)
+						a(href="https://vk.com/georgeek").home-cta Сheckout Twitter
+		
+		mixin design-img(link, img, color)
+			a.design-img-link(href="#{link}" data-color=color)
+				img(src= img  alt={img})
+
+		section.portfolio
+			.flex.flex--space-around
+				.col-50.flex.flex--center.github(data-origin-color="#ea4c89")
+					.col-1
+						p.home-lead ...See on Github...
+
+						.portfolio-wrap
+							+design-img(null, 'https://placeimg.com/200/200/nature',	'rgba(117, 235, 164, 0.94)')
+							+design-img(null, 'https://placeimg.com/200/200/arch',		'#38decc')
+							+design-img(null, 'https://placeimg.com/200/200/animals',	'rgba(248, 79, 73, 1)')
+							+design-img(null, 'https://placeimg.com/200/200/people',	'rgba(148, 32, 243, 0.96)')
+							+design-img(null, 'https://placeimg.com/200/200/tech',		'#d6d599')
+							+design-img(null, 'https://placeimg.com/200/200/any',		'#5aabd5')
+
+						a(href="").home-cta See more on Github
+
+				.col-50.flex.flex--center.elsewhere(data-origin-color="#1769ff")
+					.col-1
+						p.home-lead ...and Anywhere else...
+
+						.portfolio-wrap
+							+design-img(null, 'https://placeimg.com/200/200/any/grayscale', 	'rgba(244, 118, 175, 1)')
+							+design-img(null, 'https://placeimg.com/200/200/nature/grayscale',	'rgba(112, 112, 112, 1)')
+							+design-img(null, 'https://placeimg.com/200/200/nature/sepia',		'#f59e82')
+							+design-img(null, 'https://placeimg.com/200/200/animals/grayscale',	'#d57628')
+							+design-img(null, 'https://placeimg.com/200/200/tech/sepia',		'#f6c599')
+							+design-img(null, 'https://placeimg.com/200/200/nature/sepia',		'#aeb3b0')
+
+						a(href="").home-cta See more on Elsewhere
+
+		section.notes
+			.flex.flex--center
+				.col-2
+					p.home-lead ...&nbsp;Sending email notes&nbsp;...
+
+					.notes-signup-box
+						.form-wrap
+							form
+								.form-display
+									.field-group
+										label.label-name(for='mce-NAME' value="Name") Name
+										input(type="text" value="" name="NAME")
+									.field-group
+										label.label-email(for='mce-EMAIL' value="Email") Email
+										input(type="email" value="" name="EMAIL")
+									input(type="submit" value="Subscribe" class="button")
+
+			.flex.flex--center
+				.col-1
+					p Лети, лети письмецо, через запад на восток, через север, через юг, возвращайся, сделав круг. Лишь коснешься ты земли, будь по-моему вели!
+				.col-1
+					p Надо сходить в магазин и купить: 
+					ul 
+						li: a(href="") Творог, 
+						li: a(href="") бананы, 
+						li: a(href="") мед
+		
+		section.podcast
+			.flex.flex--center
+				.col-2
+					p.home-lead ... and listening Podcasts.
+
+					.podcast-content
+						.podcast-thumb
+							img(src="http://placehold.it/150x150")
+
+						.podcast-text
+							.date 21 Jul 2015
+							.title Full-Process Designer
+							.player: iframe(frameborder='0' height="36px" scrolling='0' seamless src='https://simplecast.fm/e/14311?style=light' width='100%')
+			.flex.flex--center
+				.col-1
+					a(href='').home-cta.web Website
+				.col-1
+					a(href='').home-cta.itunes iTunes
+
+		footer.home-footer
+			a(href='mailto:egormad@gmail.com') egormad@gmail.com

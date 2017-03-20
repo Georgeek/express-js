@@ -1,8 +1,14 @@
 .site-wrap
 	.mobile-nav
-		display: none
+		padding: 58px 0 0
+		width: 100%
+		position: absolute
+		display: flex
+		justify-content: space-around
+		background: white
+		// display: none
 		transform: translateY(-100%)
-		transition: all .3s ease-in-out
+		transition: all 2.3s ease-in-out
 		ul
 			margin: 0 auto
 			padding: 0
@@ -23,6 +29,7 @@
 			justify-content: space-between
 			background-color: white
 			text-align: center
+		
 		&:hover
 			.nav-text
 				transform: translateX(0)
@@ -32,11 +39,13 @@
 			transform: translateX(-100px)
 			transition: .1s
 			color: black
+		
 		ul
 			margin: 0 auto
 			padding: 0
 			display: flex
 			flex-direction: column
+			align-items: center
 			list-style: none
 
 // SVG icons header
@@ -76,31 +85,30 @@
 		span:after
 			bottom: 18px
 
-		&:hover span
+		// &:hover 
+		span.is-open
 			background: transparent
 
-		&:hover span:before,
-		&:hover span:after
+		// &:hover 
+		span.is-open:before,
+		// &:hover 
+		span.is-open:after
 			transform-origin: center
 			width: 50px
 
-		&:hover span:before
+		// &:hover 
+		span.is-open:before
 			transform: rotate(45deg)
 			top: 0
 
-		&:hover span:after
+		// &:hover 
+		span.is-open:after
 			transform: rotate(-45deg)
 			top: -2px
 
 @media (max-width: 775px)
 	.site-wrap
 		.mobile-nav.is-open
-			padding: 58px 0 0
-			width: 100%
-			position: absolute
-			display: flex
-			justify-content: space-around
-			background: white
 
 			transform: translateY(0%)
 
