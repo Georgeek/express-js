@@ -2,7 +2,6 @@ Home page
 1. Top section - video animated with colored background https://www.youtube.com/watch?v=7S0X0OWMu_k
 2. background picture zoom in
 5. Logo SVG my own
-7. Mobile navbar JS activated - not smooth slide. Cross changes on click
 
 Express JS:
 login with social media

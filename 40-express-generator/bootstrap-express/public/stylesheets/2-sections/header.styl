@@ -6,16 +6,68 @@
 		display: flex
 		justify-content: space-around
 		background: white
-		// display: none
 		transform: translateY(-100%)
-		transition: all 2.3s ease-in-out
+		transition: all .3s ease-in-out
 		ul
 			margin: 0 auto
 			padding: 0
 			display: flex
 			flex-direction: row
+			justify-content: space-between
 			list-style: none
+			li
+				margin-right: .3em
+				&:last-child
+					margin-right: 0
 
+		svg
+			margin: 0 auto
+			width: 25px
+			height: 25px
+
+		a.nav-bar
+			padding: .7rem .6rem
+			display: flex
+			flex-direction: column
+			text-align: center
+			// text-transform: uppercase
+			color: black
+
+		.social-links
+			margin: 0
+		.nav-text
+			margin-top: .1em
+	// Header nav-bar buttons
+
+	.nav-bar
+		margin: 0 auto
+		padding: .85rem .6rem
+		display: flex
+		flex-direction: column
+		text-align: center
+		// text-transform: uppercase
+		text-decoration: none
+		color: black
+		&:hover
+			text-decoration: none
+			color: black
+			opacity: .75
+			transform: translateY(3px)
+			transition: .1s
+			.logo--js-j-svg
+				fill: #4CAF50
+			.logo--js-s-svg
+				fill: #FFEB3B
+			.nav-link--home-svg
+				fill: #E91E63
+			.nav-link--about-svg
+				fill: #f44336
+			.nav-link--gallery-svg
+				fill: #9C27B0
+			.social-links--gmail
+				fill: #03A9F4
+
+// Side navigation bar
 	header
 		width: 6rem
 		.header-position
@@ -29,7 +81,7 @@
 			justify-content: space-between
 			background-color: white
 			text-align: center
-		
+
 		&:hover
 			.nav-text
 				transform: translateX(0)
@@ -39,7 +91,7 @@
 			transform: translateX(-100px)
 			transition: .1s
 			color: black
-		
+
 		ul
 			margin: 0 auto
 			padding: 0
@@ -49,10 +101,10 @@
 			list-style: none
 
 // SVG icons header
-	svg
-		margin: 0 auto
-		width: 40px
-		height: 40px
+			svg
+				margin: 0 auto
+				width: 40px
+				height: 40px
 	.logo
 		svg
 			height: 80px
@@ -85,23 +137,18 @@
 		span:after
 			bottom: 18px
 
-		// &:hover 
 		span.is-open
 			background: transparent
 
-		// &:hover 
 		span.is-open:before,
-		// &:hover 
 		span.is-open:after
 			transform-origin: center
 			width: 50px
 
-		// &:hover 
 		span.is-open:before
 			transform: rotate(45deg)
 			top: 0
 
-		// &:hover 
 		span.is-open:after
 			transform: rotate(-45deg)
 			top: -2px
@@ -109,32 +156,7 @@
 @media (max-width: 775px)
 	.site-wrap
 		.mobile-nav.is-open
-
 			transform: translateY(0%)
-
-			ul
-				justify-content: space-between
-				margin: 0
-				li
-					margin-right: .3em
-					&:last-child
-						margin-right: 0
-			a.nav-bar
-				padding: .7rem .6rem
-				display: flex
-				flex-direction: column
-				text-align: center
-				// text-transform: uppercase
-				color: black
-			svg
-				margin: 0 auto
-				width: 25px
-				height: 25px
-			.social-links
-				margin: 0
-			.nav-text
-				margin-top: .1em
-
 
 		header
 			width: auto
