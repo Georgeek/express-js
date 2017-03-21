@@ -1,0 +1,23 @@
+mixin face(face, words, name)
+	li.face(style='background-image:url(' + face '); background-repeat:no-repeat;')
+		.bubble
+			p #{words}
+			cite - #{name}
+section.mentoring
+	.flex.flex--center
+		.col-1
+			ul.faces
+				+face('http://fillmurray.com/80/80','Greate job, George, awesome work', 'Bill Murray')
+				+face('http://www.placecage.com/g/80/80','His is just do his job :)', 'Murray Bill')
+				+face('http://www.placecage.com/80/80','Did you know, that we are good friends??', 'Билл Мюррей')
+				+face('http://www.placecage.com/c/80/80','Oh, Bill Murray here, how awesome!', 'Мюррей Билл')
+				+face('http://fillmurray.com/80/80','True, these guys so true, yo', 'Известный актер')
+				+face('http://www.placecage.com/g/80/80','Greate job, George, awesome work', 'Bill Murray')
+				+face('http://www.placecage.com/80/80','His is just do his job :)', 'Murray Bill')
+				+face('http://www.placecage.com/c/80/80','Did you know, that we are good friends??', 'Билл Мюррей')
+				+face('http://fillmurray.com/g/80/80','Oh, Bill Murray here, how awesome!', 'Мюррей Билл')
+				+face('http://fillmurray.com/80/80','True, these guys so true, yo', 'Известный актер')
+				li.face.back-btn
+		.col-1
+			p.home-lead.outdented ...Feedback is like an second argument of the function - a Callback...
+			a(href="https://github.com/Georgeek").home-cta Fork on GitHub

@@ -779,6 +779,33 @@ footer.home-footer a:hover {
     font-size: 24px;
   }
 }
+.blog-container .col-2 {
+  margin: 0 auto;
+}
+.blog-container .blog-title .news-style {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+.blog-container .blog-title .news-style a {
+  background-color: #ddd;
+  padding: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  outline: none;
+}
+.blog-container .blog-title h2 {
+  padding: 0;
+  margin: 0;
+}
+.blog-container .blog-meta span {
+  font-size: 14px;
+}
+.blog-container .blog-author {
+  font-size: 20px;
+}
 main .flex {
   padding: 2rem 0;
   display: flex;
@@ -790,8 +817,8 @@ main .flex--center {
 main .flex--space-around {
   justify-content: space-around;
 }
-main .flex--center {
-  justify-content: center;
+main .flex--space-between {
+  justify-content: space-between;
 }
 main .order-first {
   order: -1;
@@ -837,6 +864,11 @@ main .order-first {
   .home-lead.outdented {
     text-indent: 0;
   }
+}
+.blog-container .photo-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
 }
 body {
   font: 1.5rem "Slabo 27px", Helvetica, Arial, sans-serif;

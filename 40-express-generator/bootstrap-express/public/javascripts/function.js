@@ -10,10 +10,10 @@
 		mentoringBubbleClick();
 	});
 
-	$window.scroll(function() {
-		scrollingSections();
-		startArticle();
-	});
+	// $window.scroll(function() {
+	// 	scrollingSections();
+	// 	startArticle();
+	// });
 
 // scroll down faces pop up
 	function scrollingSections() {
@@ -40,7 +40,7 @@
 	function startArticle() {
 		var wScroll = $window.scrollTop(),
 			$articles = $('.article-thumb');
-		
+
 		if($('section.articles').offset().top - $window.height()/1.2 < wScroll) {
 			$articles.each(function(i) {
 				setTimeout(function() {
@@ -162,7 +162,7 @@
 	function onMobileToggleClick(e) {
 		var $this = $(this),
 			$navigation = $('.mobile-nav');
-		
+
 		$this.children().toggleClass('is-open');
 		$navigation.toggleClass('is-open');
 	}
@@ -187,7 +187,7 @@
 	function bindigs () {
 		//toggle mobileNav
 		$('.mobile-nav-toggle').on('click', onMobileToggleClick);
-		
+
 		// smooth scroll
 		// $('a[href^="#"]').on('click', onBlankLinkClick);
 	}

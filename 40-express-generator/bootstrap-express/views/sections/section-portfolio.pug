@@ -1,0 +1,33 @@
+mixin design-img(link, img, color)
+	a.design-img-link(href="#{link}" data-color=color)
+		img(src= img  alt={img})
+
+section.portfolio
+	.flex.flex--space-around
+		.col-50.flex.flex--center.github(data-origin-color="#ea4c89")
+			.col-1
+				p.home-lead ...See on Github...
+
+				.portfolio-wrap
+					+design-img(null, 'https://placeimg.com/200/200/nature',	'rgba(117, 235, 164, 0.94)')
+					+design-img(null, 'https://placeimg.com/200/200/arch',		'#38decc')
+					+design-img(null, 'https://placeimg.com/200/200/animals',	'rgba(248, 79, 73, 1)')
+					+design-img(null, 'https://placeimg.com/200/200/people',	'rgba(148, 32, 243, 0.96)')
+					+design-img(null, 'https://placeimg.com/200/200/tech',		'#d6d599')
+					+design-img(null, 'https://placeimg.com/200/200/any',		'#5aabd5')
+
+				a(href="").home-cta See more on Github
+
+		.col-50.flex.flex--center.elsewhere(data-origin-color="#1769ff")
+			.col-1
+				p.home-lead ...and Anywhere else...
+
+				.portfolio-wrap
+					+design-img(null, 'https://placeimg.com/200/200/any/grayscale', 	'rgba(244, 118, 175, 1)')
+					+design-img(null, 'https://placeimg.com/200/200/nature/grayscale',	'rgba(112, 112, 112, 1)')
+					+design-img(null, 'https://placeimg.com/200/200/nature/sepia',		'#f59e82')
+					+design-img(null, 'https://placeimg.com/200/200/animals/grayscale',	'#d57628')
+					+design-img(null, 'https://placeimg.com/200/200/tech/sepia',		'#f6c599')
+					+design-img(null, 'https://placeimg.com/200/200/nature/sepia',		'#aeb3b0')
+
+				a(href="").home-cta See more on Elsewhere
