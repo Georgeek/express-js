@@ -446,6 +446,7 @@ section.articles .article-thumb.is-emph {
   animation-duration: 1s;
   animation-fill-mode: both;
   z-index: 1;
+  overflow: hidden;
 }
 section.articles .article-thumb:after {
   content: '';
@@ -492,13 +493,13 @@ section.articles .article-thumb:hover .article-meta {
     transform: scale3d(1, 1, 1);
   }
   10%, 20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -1deg);
   }
   30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 1deg);
   }
   40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -1deg);
   }
   to {
     transform: scale3d(1, 1, 1);
@@ -509,13 +510,13 @@ section.articles .article-thumb:hover .article-meta {
     transform: scale3d(1, 1, 1);
   }
   10%, 20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -1deg);
   }
   30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 1deg);
   }
   40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -1deg);
   }
   to {
     transform: scale3d(1, 1, 1);
@@ -526,13 +527,13 @@ section.articles .article-thumb:hover .article-meta {
     transform: scale3d(1, 1, 1);
   }
   10%, 20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -1deg);
   }
   30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 1deg);
   }
   40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -1deg);
   }
   to {
     transform: scale3d(1, 1, 1);
@@ -543,13 +544,13 @@ section.articles .article-thumb:hover .article-meta {
     transform: scale3d(1, 1, 1);
   }
   10%, 20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -1deg);
   }
   30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 1deg);
   }
   40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -1deg);
   }
   to {
     transform: scale3d(1, 1, 1);

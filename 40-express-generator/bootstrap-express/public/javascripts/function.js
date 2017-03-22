@@ -10,19 +10,23 @@
 		mentoringBubbleClick();
 	});
 
-	// $window.scroll(function() {
-	// 	scrollingSections();
-	// 	startArticle();
-	// });
+	if (location.pathname === '/') {
+		$window.scroll(function() {
+			scrollingSections();
+			startArticle();
+		});
+	}
 
-// scroll down faces pop up
+// scroll down faces pop up 
 	function scrollingSections() {
 		var wScroll = $window.scrollTop();
-		$('.video-strip').css('background-position', 'center -'+ wScroll +'px');
+		
+		if( $window.width() > 640 ) {
+			
+			$('.video-strip').css('background-position', 'center -'+ wScroll +'px');
+			
+			if($('section.mentoring').offset().top - $window.height()/2 < wScroll) {
 
-		// console.log(wScroll);
-		if($('section.mentoring').offset().top - $window.height()/2 < wScroll) {
-			if( $window.width() > 640 ) {
 				$faces.addClass('launched');
 
 				if( !$face.hasClass('has-bubble-open')) {
@@ -30,9 +34,11 @@
 						$('.face:nth-child(3)').addClass('has-bubble-open');
 					}, 500);
 				}
-			} else {
-				mentoringNarrowStart();
+
 			}
+
+		} else {
+			mentoringNarrowStart();
 		}
 	}
 

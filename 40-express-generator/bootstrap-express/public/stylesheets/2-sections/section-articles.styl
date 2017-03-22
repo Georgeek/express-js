@@ -33,6 +33,7 @@ section.articles
 			animation-duration: 1s
 			animation-fill-mode: both
 			z-index: 1
+			overflow: hidden
 
 		&:after
 			content: ''
@@ -76,10 +77,10 @@ section.articles
 	from
 		transform: scale3d(1, 1, 1)
 	10%, 20%
-		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -1deg)
 	30%, 50%, 70%, 90%
-		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+		transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 1deg)
 	40%, 60%, 80%
-		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+		transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -1deg)
 	to
 		transform: scale3d(1, 1, 1)
