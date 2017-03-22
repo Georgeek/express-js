@@ -1,28 +1,31 @@
 .blog-container
 	.col-2
 		margin: 0 auto
+	.blog-news
+		.blog-title
+			.news-style
 
-	.blog-title
-		.news-style
+				font-size: 10px
+				font-weight: bold
+				margin-bottom: 5px
+				display: block
 
-			font-size: 10px
-			font-weight: bold
-			margin-bottom: 5px
-			display: block
+				a
+					background-color: #ddd
+					padding: 3px
+					text-transform: uppercase
+					letter-spacing: .5px
+					text-decoration: none
+					outline: none
+			h2
+				padding: 0
+				margin: 0
+		.blog-meta
+			span
+				font-size: 14px
 
-			a
-				background-color: #ddd
-				padding: 3px
-				text-transform: uppercase
-				letter-spacing: .5px
-				text-decoration: none
-				outline: none
-		h2
-			padding: 0
-			margin: 0
-	.blog-meta
-		span
-			font-size: 14px
+		.blog-author
+			font-size: 20px
 
-	.blog-author
-		font-size: 20px
+		@media (max-width: 640px)
+			margin: 0 2rem

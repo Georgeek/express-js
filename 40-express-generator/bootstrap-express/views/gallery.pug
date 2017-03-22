@@ -2,13 +2,24 @@ extends layout
 
 block content
 	section.title
-		h1= title
+		h1= pageTitle
 	.blog-container
+		- var sectionTitle = 'Georgeek photo epic'
+		- var storyTitle = 'This One Time, At Team Camp'
+		- var postDate = 'Mar 22, 2017'
+		- var author = 'George Madyarov'
 		include sections/blog-news.pug
 		.blog-body
 			.flex
 				.photo-container
-					//- img(src="https://ep1.pinkbike.org/p6pb14481063/p5pb14481063.jpg")
+					.photo-element
+						img.photo-100(src="https://ep1.pinkbike.org/p6pb14481063/p5pb14481063.jpg")
+						.photo-title.flex.flex--center
+							.photo-title--overlay
+								.photo-title--line-1 this one time
+								.photo-title--line-2 at team camp
+								.photo-title--line-3 intence factory racing in california
+								.photo-title--line-4 photography and words // georgeek madyarov //
 
 			.flex
 				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur beatae in, neque. Pariatur blanditiis totam consequatur ratione impedit in, aliquid velit nemo culpa accusantium, quae quo numquam nihil est cum.
@@ -17,6 +28,13 @@ block content
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt consectetur facere vitae sint inventore pariatur, et dolores, tempora dolorum doloremque ab, harum nisi unde sit tempore natus id saepe commodi.
 				.col-50
 					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nisi nihil iste aspernatur culpa, perspiciatis quae suscipit rem blanditiis ea dolore, exercitationem magnam esse dolor sed facilis. Animi, repellat, culpa.
+	.blog-container
+
+		- var title = 'Georgeek photo story'
+		- var storyTitle = 'Another awesome photostory'
+		- var postDate = 'Mar 22, 2017'
+		- var author = 'Busya & Peche'
+		include sections/blog-news.pug
 
 
 

@@ -1,7 +1,74 @@
 .blog-container
 
-
 	.photo-container
 		margin: 0 auto
 		width: 100%
 		max-width: 100%
+
+		.photo-element
+			position: relative
+			width: 100%
+			padding-bottom: 66.7%
+
+			img.photo-100
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+
+			.photo-title
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 100%
+				color: white
+
+				&--overlay
+					padding-top: 13%
+					text-align: center
+
+				&--line-1
+					font-size: 4em
+					line-height: 100px
+					text-transform: uppercase
+				&--line-2
+					font-size: 2.5em
+					line-height: 60px
+					text-transform: uppercase
+				&--line-3
+					margin: 0 auto
+					width: 56%
+					font-size: 1em
+					line-height: 40px
+					border-top: 3px solid white
+					border-bottom: 3px solid white
+					text-transform: capitalize
+				&--line-4
+					margin-top: 10px
+					font-size: 11px
+					line-height: 15px
+					text-transform: lowercase
+				@media (max-width: 640px)
+					&--overlay
+						padding-top: 7%
+					&--line-1
+						font-size: 2em
+						line-height: 50px
+					&--line-2
+						font-size: 1.7em
+						line-height: 30px
+					&--line-3
+						margin-top: 10px
+						width: 48%
+						font-size: .7em
+						line-height: 20px
+						border-top: 3px solid white
+						border-bottom: 3px solid white
+			.flex
+				padding: 0
+			.flex--center
+				align-items: flex-start

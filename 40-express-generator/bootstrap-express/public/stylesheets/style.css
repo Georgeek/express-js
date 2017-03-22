@@ -783,13 +783,13 @@ footer.home-footer a:hover {
 .blog-container .col-2 {
   margin: 0 auto;
 }
-.blog-container .blog-title .news-style {
+.blog-container .blog-news .blog-title .news-style {
   font-size: 10px;
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
 }
-.blog-container .blog-title .news-style a {
+.blog-container .blog-news .blog-title .news-style a {
   background-color: #ddd;
   padding: 3px;
   text-transform: uppercase;
@@ -797,15 +797,20 @@ footer.home-footer a:hover {
   text-decoration: none;
   outline: none;
 }
-.blog-container .blog-title h2 {
+.blog-container .blog-news .blog-title h2 {
   padding: 0;
   margin: 0;
 }
-.blog-container .blog-meta span {
+.blog-container .blog-news .blog-meta span {
   font-size: 14px;
 }
-.blog-container .blog-author {
+.blog-container .blog-news .blog-author {
   font-size: 20px;
+}
+@media (max-width: 640px) {
+  .blog-container .blog-news {
+    margin: 0 2rem;
+  }
 }
 main .flex {
   padding: 2rem 0;
@@ -870,6 +875,84 @@ main .order-first {
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
+}
+.blog-container .photo-container .photo-element {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.7%;
+}
+.blog-container .photo-container .photo-element img.photo-100 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.blog-container .photo-container .photo-element .photo-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.blog-container .photo-container .photo-element .photo-title--overlay {
+  padding-top: 13%;
+  text-align: center;
+}
+.blog-container .photo-container .photo-element .photo-title--line-1 {
+  font-size: 4em;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+.blog-container .photo-container .photo-element .photo-title--line-2 {
+  font-size: 2.5em;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+.blog-container .photo-container .photo-element .photo-title--line-3 {
+  margin: 0 auto;
+  width: 56%;
+  font-size: 1em;
+  line-height: 40px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  text-transform: capitalize;
+}
+.blog-container .photo-container .photo-element .photo-title--line-4 {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: lowercase;
+}
+@media (max-width: 640px) {
+  .blog-container .photo-container .photo-element .photo-title--overlay {
+    padding-top: 7%;
+  }
+  .blog-container .photo-container .photo-element .photo-title--line-1 {
+    font-size: 2em;
+    line-height: 50px;
+  }
+  .blog-container .photo-container .photo-element .photo-title--line-2 {
+    font-size: 1.7em;
+    line-height: 30px;
+  }
+  .blog-container .photo-container .photo-element .photo-title--line-3 {
+    margin-top: 10px;
+    width: 48%;
+    font-size: 0.7em;
+    line-height: 20px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+  }
+}
+.blog-container .photo-container .photo-element .flex {
+  padding: 0;
+}
+.blog-container .photo-container .photo-element .flex--center {
+  align-items: flex-start;
 }
 body {
   font: 1.5rem "Slabo 27px", Helvetica, Arial, sans-serif;
