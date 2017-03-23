@@ -1,5 +1,11 @@
 .blog-container
 
+	.flex
+		padding: 0
+
+	.bold
+		font-weight: bold
+
 	.photo-container
 		margin: 0 auto
 		width: 100%
@@ -68,7 +74,44 @@
 						line-height: 20px
 						border-top: 3px solid white
 						border-bottom: 3px solid white
-			.flex
-				padding: 0
+
 			.flex--center
 				align-items: flex-start
+	.text-container
+		max-width: 824px
+		overflow-wrap: break-word
+		word-wrap: break-word
+		font-size: 16px
+
+	.photo-news-caption
+		max-width: 770px
+		font-style: italic
+		font-size: 14px
+		line-height: 20px
+		margin: 0 auto
+		padding: 5px 0
+
+	.georgeek-caption
+		width: 26px
+		height: 15px
+		position: relative
+		top: 3px
+		margin-right: .2em
+
+	.quotes
+		display: flex
+		color: #444
+
+		&--icon
+			margin-right: 10px
+
+		&--text
+			font-style: italic
+			font-size: 16px
+			line-height: 1.4em
+
+		&--author
+			margin: 1em 2em 0 0
+			font-weight: bold
+			font-style: italic
+			text-align: right

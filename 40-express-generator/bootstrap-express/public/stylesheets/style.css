@@ -781,7 +781,7 @@ footer.home-footer a:hover {
   }
 }
 .blog-container .col-2 {
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .blog-container .blog-news .blog-title .news-style {
   font-size: 10px;
@@ -871,6 +871,12 @@ main .order-first {
     text-indent: 0;
   }
 }
+.blog-container .flex {
+  padding: 0;
+}
+.blog-container .bold {
+  font-weight: bold;
+}
 .blog-container .photo-container {
   margin: 0 auto;
   width: 100%;
@@ -948,11 +954,47 @@ main .order-first {
     border-bottom: 3px solid #fff;
   }
 }
-.blog-container .photo-container .photo-element .flex {
-  padding: 0;
-}
 .blog-container .photo-container .photo-element .flex--center {
   align-items: flex-start;
+}
+.blog-container .text-container {
+  max-width: 824px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+.blog-container .photo-news-caption {
+  max-width: 770px;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+.blog-container .georgeek-caption {
+  width: 26px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+  margin-right: 0.2em;
+}
+.blog-container .quotes {
+  display: flex;
+  color: #444;
+}
+.blog-container .quotes--icon {
+  margin-right: 10px;
+}
+.blog-container .quotes--text {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+.blog-container .quotes--author {
+  margin: 1em 2em 0 0;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
 }
 body {
   font: 1.5rem "Slabo 27px", Helvetica, Arial, sans-serif;
