@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	form(action="/test/submit" method="post")
+		input(type='text' name='id')
+		button(type='submit') Submit
+
+
+	if success
+		h2 Successful Validation!!
+	else
+		if errors
+			ul
+				.errors
+					each error in errors
+						li= error.msg
+
+		form(action="submit" method="post")
+			.input
+				label(for='email') E-Mail
+				input(type='text' name='email' id='email')
+			.input
+				label(for='password') Password
+				input(type='text' name='password' id='password')
+			.input
+				label(for='confirmPassword') Confirm Password
+				input(type='text' name='confirmPassword' id='confirmPassword')
+			button(type='submit') Submit
+
