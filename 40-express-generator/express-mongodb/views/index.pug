@@ -2,31 +2,89 @@ extends layout
 
 block content
 	h1= title
-	p Welcome to #{title}
+	.container
+		p Welcome to #{title}
 
-	form(action="/test/submit" method="post")
-		input(type='text' name='id')
-		button(type='submit') Submit
-
-
-	if success
-		h2 Successful Validation!!
-	else
-		if errors
-			ul
-				.errors
-					each error in errors
-						li= error.msg
-
-		form(action="submit" method="post")
-			.input
-				label(for='email') E-Mail
-				input(type='text' name='email' id='email')
-			.input
-				label(for='password') Password
-				input(type='text' name='password' id='password')
-			.input
-				label(for='confirmPassword') Confirm Password
-				input(type='text' name='confirmPassword' id='confirmPassword')
+		form(action="/test/submit" method="post")
+			input(type='text' name='id')
 			button(type='submit') Submit
+
+
+		if success
+			h2 Successful Validation!!
+		else
+			if errors
+				ul
+					.errors
+						each error in errors
+							li= error.msg
+
+			form(action="submit" method="post")
+				.input
+					label(for='email') E-Mail
+					input(type='text' name='email' id='email')
+				.input
+					label(for='password') Password
+					input(type='text' name='password' id='password')
+				.input
+					label(for='confirmPassword') Confirm Password
+					input(type='text' name='confirmPassword' id='confirmPassword')
+				button(type='submit') Submit
+
+	.container
+		h1 MONGODB - EXERCISE
+		section.insert
+			h3 Insert Data
+			form(action="insert" method="post")
+				div.input
+						label(for="username") username
+						input(type="text" id="username" name="username")
+				div.input
+						label(for="firstName") firstName
+						input(type="text" id="firstName" name="firstName")
+				div.input
+						label(for="lastName") lastName
+						input(type="text" id="lastName" name="lastName")
+				button(type="submit") INSERT
+
+		section.get
+			h3 Get Data
+			a(href="get-data") LOAD DATA
+			if users
+				each user in users
+					article.item
+						div username: #{user.username}
+						div firstName: #{user.firstName}
+						div lastName: #{user.lastName}
+						div lastName: #{user._id}
+			else
+				article.item
+
+		section.update
+			h3 Update Data
+			form( action="update" method="post")
+				div.input
+					label(for="id") ID
+					input(type="text" id="id" name="id")
+
+				div.input
+					label(for="username") username
+					input(type="text" id="username" name="username")
+
+				div.input
+					label(for="firstName") firstName
+					input(type="text" id="firstName" name="firstName")
+
+				div.input
+					label(for="lastName") lastName
+					input(type="text" id="lastName" name="lastName")
+				button(type="submit") UPDATE
+
+		section.delete
+			h3 Delete Data
+			form(action="delete" method="post")
+				div.input
+					label(for="id") ID
+					input(type="text" id="id" name="id")
+				button(type="submit") DELETE
 
